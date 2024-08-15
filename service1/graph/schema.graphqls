@@ -1,0 +1,16 @@
+type Query {
+  test: TestResult!
+}
+
+type Mutation {
+  test: TestResult!
+}
+
+type TestResult {
+  data: String!
+}
+
+extend schema @link(
+  url: "https://specs.apollo.dev/federation/v2.3",
+  import: ["@external", "@requires", "@provides", "@key", "@shareable", "@inaccessible", "@tag", "@override", "@composeDirective", "@extends"]
+)
